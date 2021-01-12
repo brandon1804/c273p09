@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: "http://localhost/C273/C273_P09CloudNine/getStatistics.php",
+        url: "getStatistics.php",
         cache: false,
         dataType: "JSON",
         success: function (response) {

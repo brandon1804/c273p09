@@ -19,28 +19,6 @@ mysqli_close($link);
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <script src="js/showCountryObese.js" type="text/javascript"></script>
-        <script>
-            $(document).ready(function () {
-                $("#idCountry").change(function () {
-                    var id = $("#idCountry").val();
-                    $.ajax({
-                        type: "GET",
-                        url: "http://localhost/C273/C273_P09CloudNine/getCountryDetails.php",
-                        data: "id=" + id,
-                        cache: false,
-                        dataType: "JSON",
-                        success: function (response) {
-                            var message = "<tbody><tr><td>" + response.population + "</td>"
-                                    + "<td>" + response.obese + "</td></tr></tbody>";
-                            $("#obeseTable").append(message);
-                        },
-                        error: function (obj, textStatus, errorThrown) {
-                            console.log("Error " + textStatus + ": " + errorThrown);
-                        }
-                    });
-                });
-            });
-        </script>
     </head>
     <body>
         <div class="container">
